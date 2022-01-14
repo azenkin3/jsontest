@@ -1,14 +1,9 @@
 <!DOCTYPE html>
-
 <html>
-
 <head>
-
 <title></title>
 
 <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.6.0.min.js"></script>
-
-
 
 <script>
 
@@ -22,25 +17,16 @@ dataType: "json",
 
 success : function(data){
 
-
-
 if(data.length>0){
 
 var tb = $("<table/>");
 
-
-
 for(var i in data){
 
 var $id = data[i].id;
-
 var $name = data[i].name;
-
 var $gender = data[i].gender;
-
 var $age = data[i].age;
-
-
 
 var row= $("<tr/>").append(
 
@@ -53,60 +39,23 @@ $("<td/>").text($gender),
 $("<td/>").text($age),
 
 );
-
-
-
 tb.append(row);
-
 }
-
 $(".wrap").append(tb);
 
-
-
 }
-
-
-
 }
-
-
-
 });
-
-
-
 });
-
-
 
 </script>
-
 </head>
-
 <body>
 
-
-
-
-
 <div class="wrap"></div>
-
-
-
-
-<!--input-->
-
 <input id="myInput" type="text" placeholder="Search..">
 
-
-
 <script>
-
-
-//search
-
-
 
 $("#myInput").on("keyup", function() {
 
@@ -117,15 +66,7 @@ $(".wrap tr").filter(function() {
 $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
 
 });
-
-
-
 });
-
-
-
 </script>
-
 </body>
-
 </html>
