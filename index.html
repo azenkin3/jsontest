@@ -58,6 +58,29 @@ $(".wrap").append(tb);
 });
     
   </script>  
+
+<input id="input1" type="text" placeholder="Search...">
+
+<div class="wrap"></div>
+
+<script>
+
+$("#input1").on("keyup", function () {
+
+var value = $(this).val();
+
+$(".wrap tr").filter(function () {
+
+$(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
+
+});
+
+});
+
+
+
+</script>
+
   
 </body>
 
